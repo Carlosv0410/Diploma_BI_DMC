@@ -184,7 +184,7 @@ elif modulos == "Análisis visual":
             "Primero debe cargar un dataset en el módulo "
             "'Carga y perfil del dataset'."
         )
-    lista_columna_numerica = data.select_dtypes(include = "numeric").columns.tolist()
+    lista_columna_numerica = data.select_dtypes(include = "number").columns.tolist()
     variable_numerica = st.selectbox("Selecione la columna númerica",lista_columna_numerica)
 
     lista_columna_categorica = data.select_dtypes(include=["object", "category"]).columns.tolist()
